@@ -1,0 +1,796 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-main-color: #0A0A0B;
+    --text-main-color: #ffffff;
+    --btn-bg-color: #206AD9;
+    --btn-bg-color-hover: #4177DC;
+    --btn-bg-color-active: #608CE2;
+    --icon-color: #BABEC4;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Exo regular';
+    color: var(--text-main-color);
+    background-color: var(--bg-main-color)
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/*------------------- header start -------------------*/
+header {
+    width: 100;
+    height: auto;
+    background-color: transparent;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    /* background-color: rgb(136, 136, 136); */
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.nav__list--item {
+    list-style-type: none;
+}
+
+.nav__list--item-link {
+    text-decoration: none;
+    color: var(--text-main-color);
+}
+
+.nav__list--item-link:hover {
+    color: var(--icon-color);
+}
+
+.active {
+    text-shadow: 0px 0px 32px #346DDA;
+    color: var(--btn-bg-color-hover);
+}
+
+/*------------------- header finished -------------------*/
+
+/*------------------- intro start -------------------*/
+.intro {
+    width: 100%;
+    height: auto;
+}
+
+.intro::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: -138px;
+    top: -128px;
+    background: rgba(55, 74, 109, 0.5);
+    filter: blur(90px);
+}
+
+.intro::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 1100px;
+    top: 350px;
+
+    background: rgba(55, 74, 109, 0.5);
+    filter: blur(90px);
+}
+
+.wrapper {
+    /* background-color: silver; */
+    text-align: center;
+}
+
+.intro__title {
+    font-family: 'Exo semibold';
+    font-style: normal;
+    font-weight: 600px;
+    font-size: 36px;
+    margin-top: 72px;
+}
+
+.intro__subtitle {
+    font-family: 'Exo semibold';
+    font-style: normal;
+    font-weight: 600px;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.wrapper span {
+    font-family: 'Exo-Regular';
+    font-weight: 400px;
+    font-size: 16px;
+    margin-top: 8px;
+    display: block;
+    color: var(--icon-color);
+}
+
+.intro__car {
+    margin-top: 48px;
+}
+
+.intro__info {
+    width: 406px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px auto;
+    height: 104px;
+}
+
+.intro__start {
+    width: 90px;
+    height: 90px;
+    font-weight: 500px;
+    font-size: 14px;
+    line-height: 140%;
+    margin: 45px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #02DB8A;
+    border-radius: 50%;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 16px #02DB8A);
+}
+
+.intro__start h2 {
+    border: 2px solid #02DB8A;
+    width: 70px;
+    height: 70px;
+    font-size: 14px;
+    border-radius: 50%;
+    font-weight: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro__start:hover h2 {
+    filter: drop-shadow(0px 0px 16px #02DB8A);
+}
+
+/*------------------- intro finished -------------------*/
+
+/*------------------- about start -------------------*/
+
+/*======== about right ========*/
+.about {
+    padding: 72px 0;
+    margin-top: 0;
+}
+
+.about__container {
+        display: flex;
+    justify-content: space-around;
+    height: auto;
+}
+
+.about__info {
+    width: 40%;
+    margin: 35px 0;
+}
+
+.about__info-title {
+    width: 209px;
+    height: 68px;
+    left: 723px;
+    top: 47px;
+
+    font-family: 'Exo regular';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+}
+
+.about__info-text {
+    width: 401px;
+    height: 88px;
+    left: 723px;
+    top: 139px;
+
+    font-family: 'Exo regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+
+    color: #BABEC4;
+}
+
+.about__info-btn {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 149px;
+    height: 50px;
+    background: #4177DC;
+    border-radius: 4px;
+    font-family: 'Exo regular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/*======== about left ========*/
+
+.about__img {
+    position: relative;
+}
+
+.about__img img {
+    width: 450px;
+    height: 290px;
+}
+
+.about__img-info {
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    height: 74px;
+    right: 0px;
+    top: 250px;
+    background-color: aqua;
+    font-family: 'Exo reguler';
+    font-style: normal;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+}
+
+
+.about__img-info h5 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: #FFFFFF;
+    
+}
+
+.about__img-info p {
+    width: 157px;
+    height: 36px;
+    left: 458px;
+    top: 320px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 140%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/*------------------- about finished -------------------*/
+
+/*------------------- popular start -------------------*/
+
+.popular {
+    width: 100%;
+    padding: 72px 0px 48px 0px  ;
+}
+
+.popular__container {
+    /* background-color: #02DB8A; */
+    min-height: 508px;
+}
+
+.popular__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: first baseline;
+    width: 90%;
+    margin: 64px auto 56px;
+    list-style-type: none;
+}
+
+.popular__title {
+    margin: 0 auto;
+    width: 278px;
+    height: 68px;
+    left: 501px;
+    top: 0px;
+    font-family: 'Exo semibold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    text-align: center;
+    color: #F1F2F3;
+}
+
+
+.popular__cards {
+    position: relative;
+    overflow: hidden;
+    background: rgba(17, 18, 19, 0.701);
+    border-radius: 20px;
+    margin: 0 0 35px 45px;
+    width: 258px;
+    height: 328px;
+    font-family: 'Exo regular';
+    font-style: normal;
+    line-height: 140%;
+    color: #F1F2F3;
+    transition: 0.5s;
+}
+
+.popular__cards:hover {
+    transform: scale(1.1);
+}
+
+.popular__cards::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    background: #374A6D;
+    filter: blur(60px);
+
+}
+
+.cars__name {
+    margin: 32px 0 0 24.5px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.cars__model {
+    margin: 0 0 0 24.5px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #BABEC4;
+}
+
+
+
+.popular__cards-car {
+    margin: 12px 0 0 56.5px;
+    width: 180px;
+    height: 80.64px;
+}
+
+.popular__cards--info {
+    margin: 20px 0px 10px 24.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.popular__cards--info-desc {
+    margin: 0 30px 10px 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.popular__cards--info-desc p {
+    font-weight: 200;
+    font-size: 12px;
+}
+
+.popular__price {
+    margin: 21px 0px 0px 24.5px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.popular__cards-shop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    width: 20%;
+    height: 15%;
+    background: #4177DC;
+    border-radius: 20px 0;
+    cursor: pointer;
+}
+
+.popular__cards-shop img {
+    margin: auto;
+}
+
+.popular__indikator {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 5%;
+    margin: 0 auto;
+}
+
+.popular__indikator li {
+    width: 6px;
+    height: 6px;
+    background: #BABEC4;
+    opacity: 0.2;
+    border-radius: 50%;
+}
+
+.popular__indikator-active {
+    width: 8px;
+    height: 8px;
+    background-color: #4177DC;
+}
+
+/*------------------- popular finished -------------------*/
+
+/*------------------- feature start -------------------*/
+
+.features {
+    margin-top: 41px;
+}
+
+.features__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 713px;
+}
+
+.features__title {
+    margin: 0 auto;
+}
+
+.features__map {
+    position: absolute;
+    width: 600px;
+    height: 650.42px;
+    margin: 0 auto;
+    left: 300px;
+    top: 0;
+    transform: rotate(-10.3deg);
+}
+
+.features__car {
+    position: absolute;
+    top: 150px;
+    left: 450px;
+    width: 200px;
+    height: 462px;
+}
+
+.features__info {
+    position: absolute;
+    width: 127px;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+}
+
+
+.features__info h3, .features__info p {
+    text-align: center;
+    width: 80%;
+    margin: 10px auto;
+    font-family: 'Exo regular';
+    font-style: normal;
+    line-height: 140%;
+    color: #FFFFFF;
+}
+
+.features__info p {
+    font-weight: 400;
+    font-size: 12px;
+    color: #F1F2F3;
+}
+
+.features__info-charging {
+    left: 370px;
+    top: 216px;
+}
+
+.features__info-range {
+    left: 600px;
+    top: 270px;
+}
+
+.features__info-travel {
+    left: 370px;
+    top: 400px;
+}
+/*------------------- feature finished -------------------*/
+
+/*------------------- luxury start -------------------*/
+
+.luxury__container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 72px;
+    font-family: 'Exo regular';
+    font-style: normal;
+    line-height: 140%;
+    color: #F1F2F3;
+}
+
+.luxury__title {
+    width: 23%;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.luxury__logos {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 48px auto 0;
+}
+
+.luxury__logos-item {
+    width: 52px;
+    height: 52px;
+    background: #111213;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.luxury__logos-item:hover {
+    transform: scale(1.1);
+    background-color:dimgray;
+}
+
+.luxury__active{
+    font-weight: 500;
+    font-size: 16px;
+    background: #4177DC;
+    border-radius: 16px;
+}
+
+.luxury__logos-item img, .luxury__logos-item p {
+    margin:  auto;
+}
+
+.luxury__cards::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 60px;
+    top: 90px;
+    background: #374A6D;
+    filter: blur(70px);
+}
+
+.luxury__cards-car {
+    width: 180px;
+    height: 93.77px;
+    margin: 32px 0 0 16px;
+}
+
+.luxury__price {
+    margin: 38px 0 0 24px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/*------------------- luxury finished -------------------*/
+
+/*------------------- offer start -------------------*/
+
+.offer__container {
+    background-image: url('../images/subscribe-bg.png');
+    height: 392px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Exo';
+    font-style: normal;
+    line-height: 140%;
+    color: #F1F2F3;
+}
+
+.offer__wrap {
+    margin: 0 auto;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+
+.offer__info-title {
+    width: 70%;
+    font-weight: 600px;
+    font-size: 26px;
+}
+
+.offer__info-text {
+    margin-top: 32px;
+    width: 60%;
+    font-weight: 400;
+    font-size: 12px;
+    color: #BABEC4;
+}
+
+.offer__info-btn {
+    width: 174px;
+    height: 50px;
+    margin-top: 48px;
+    background: #4177DC;
+    border-radius: 4px;
+    font-weight: 500px;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.offer__info-btn:hover {
+    background-color: #608CE2;
+}
+
+.offer__img {
+    margin: 20px 30px 0 0 ;
+}
+/*------------------- offer finished -------------------*/
+
+/*------------------- logo start -------------------*/
+
+.logo__container {
+    display: flex;
+    justify-items: center;
+}
+
+.logo__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 30px auto;
+}
+
+.logo__list-item {
+    transition: 0.4s;
+}
+
+.logo__list-item:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+/*------------------- logo finished -------------------*/
+
+/*------------------- footer start -------------------*/
+
+footer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 50px auto;
+}
+
+.footer__main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__elcar img {
+    width: 100px;
+}
+
+.footer__list {
+    list-style-type: none;
+}
+
+.footer__elcar p {
+    margin-top: 24px;
+}
+
+.footer__elcar p, .footer__list li a, .footer__list-title {
+    font-family: 'Exo regular';
+    font-style: normal;
+    line-height: 140%;
+    color: #BABEC4;
+    text-decoration: none;
+}
+
+.footer__list-title {
+    font-weight: 600;
+    font-size: 20px;
+    color: #F1F2F3;
+    margin-bottom: 20px;
+}
+
+ 
+
+.footer__elcar p {
+    width: 198px;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.footer__list li a {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.footer__list li   {
+    margin-top: 10px;
+}
+
+.footer__follow-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 120%;
+}
+
+.footer__small-down {
+    margin: 30px auto 10px;
+    width: 169px;
+    font-family: 'Exo regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 140%;
+    color: #888B91;
+}
+
+.footer__list::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    left: -118px;
+    top: -100px;
+    background: rgba(55, 74, 109, 0.384);
+    filter: blur(90px);
+}
+
+.footer__follow::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    right: -100px;
+    top: 0px;
+    background: rgba(55, 74, 109, 0.384);
+    filter: blur(90px);
+}
